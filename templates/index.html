@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Surveillance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #212529;
+        }
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+        .section-title {
+            margin-top: 40px;
+            font-weight: 600;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .aimage {
+            width: 300px;
+            margin: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        .btn-dark {
+            margin: 10px;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-auto">Smart Security Surveillance using YOLO & OpenCV</a>
+    </div>
+</nav>
+<div class="container">
+    <!-- Live Video Section -->
+    <h3 class="section-title text-center">📹 Live Surveillance Feed</h3>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480" class="border rounded">
+    </div>
+    <!-- Buttons Section -->
+    <div class="text-center mt-3">
+        <a href="/manual-alert" class="btn btn-dark">🚨 Manual Alert</a>
+        <a href="/" class="btn btn-secondary">🔄 Refresh Page</a>
+    </div>
+    <!-- Email Form Section -->
+    <h4 class="section-title text-center">📧 Alert Email Registration</h4>
+    <form action="/submit" method="POST" class="row justify-content-center mt-3">
+        <div class="col-6">
+            <label for="email" class="form-label">Enter the Email for Alerts:</label>
+            <input type="email" id="email" name="email" required class="form-control mb-3" placeholder="Email">
+            <button type="submit" class="btn btn-dark w-100">Submit</button>
+        </div>
+    </form>
+    <!-- Recent Images Section -->
+    <h4 class="section-title text-center">🧳 Recently Detected Abandoned Objects</h4>
+    <div class="text-center mt-3">
+        {% if image1 %}
+            <a href="detail/1"><img src="{{ image1 }}" alt="Abandoned Object 1" class="aimage"></a>
+        {% endif %}
+        {% if image2 %}
+            <a href="detail/2"><img src="{{ image2 }}" alt="Abandoned Object 2" class="aimage"></a>
+        {% endif %}
+        {% if image3 %}
+            <a href="detail/3"><img src="{{ image3 }}" alt="Abandoned Object 3" class="aimage"></a>
+        {% endif %}
+        {% if not image1 and not image2 and not image3 %}
+            <p class="text-muted">No recent abandoned object detections yet.</p>
+        {% endif %}
+    </div>
+</div>
+<footer>
+    <p>© 2025 Smart Surveillance System | Developed by Team</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

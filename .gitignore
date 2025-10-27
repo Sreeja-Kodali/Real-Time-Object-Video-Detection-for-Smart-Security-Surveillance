@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment / System
+.DS_Store
+Thumbs.db
+
+# Temporary or auto-generated files
+*.log
+*.avi
+*.mp4
+
+# Flask cache
+instance/
