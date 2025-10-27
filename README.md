@@ -1,24 +1,50 @@
-# Real-Time-Object-Video-Detection-for-Smart-Security-Surveillance
-📌 Project Overview
-This project is a real-time smart surveillance system built using YOLOv3 (You Only Look Once) and Flask, designed to automatically detect unattended or abandoned objects such as bags, bottles, laptops, and other suspicious items in a live video feed.
-It enhances traditional CCTV systems by adding intelligent object monitoring and instant alert mechanisms including:
+🎥 Real-Time Object & Video Detection for Smart Security Surveillance
 
-📧 Email notifications with snapshot images
-🔊 Audio alerts using a custom alert sound
+A real-time intelligent surveillance system that detects and tracks objects (like backpacks, bottles, and suitcases), identifies abandoned objects, and sends instant alerts via email with snapshots and sound notifications — enhancing safety in public and private spaces.
 
-🧠 Features
-✅ Real-Time Object Detection using YOLOv3
-✅ Unattended Object Tracking — detects stationary objects left for a specific duration
-✅ Smart Filtering — ignores objects if a person is nearby (e.g., bag being held)
-✅ Audio & Email Alerts when unattended objects are detected
-✅ Web Interface using Flask for live monitoring
-✅ Manual Alert Button for emergency notifications
-✅ Automatic Image Saving with timestamped filenames in /static/ folder
+👩‍💻 Team Members
+Name	Roll Number
+Kodali Sreeja	2410030076
+Likitha Thumma	2410030229
+Malreddy Manogna	2410030430
+H. Esha Manogna	2410030232
+Bijju Adithi Yadav	2410030228
+🚀 Features
 
-🖥️ Tech Stack
-Component	Technology
-Language	Python 3
-Framework	Flask
-Deep Learning Model	YOLOv3
-Libraries Used	OpenCV, NumPy, smtplib, threading, playsound
-Frontend	HTML, CSS (in templates folder)
+🎯 Real-Time Object Detection – Detects multiple objects simultaneously using YOLOv3.
+
+👜 Abandoned Object Detection – Automatically triggers an alert if an object remains unattended for a defined duration (default: 10 seconds).
+
+📧 Instant Email Alerts – Sends a notification with the detected frame to the registered email address.
+
+🔊 Sound Alerts – Plays an audible alert (via alert.wav) when an unattended object is detected.
+
+👀 Web Interface – Flask-based live video stream with options to set alert email or trigger manual alerts.
+
+⚙️ Custom Object Tracking – Tracks position and movement; differentiates between attended and unattended objects.
+
+🧠 Smart Detection Logic – Avoids false positives if a person is near the object.
+
+📸 Image Logging – Saves alert frames for future review in the /static/ folder.
+
+💡 Use Cases
+
+🏢 Public Places (Airports, Malls, Stations) – Detect unattended baggage or suspicious items in real time.
+
+🏫 Educational Institutions – Monitor hallways, labs, and campuses for unattended objects.
+
+🏥 Hospitals / Offices – Enhance facility safety and reduce security risks.
+
+🏠 Smart Homes / IoT Systems – Integrate as part of intelligent home surveillance.
+
+🛠 Tech Stack
+
+Programming Language: Python
+
+Framework: Flask
+
+Computer Vision: OpenCV + YOLOv3
+
+Alert System: SMTP (Email) + Sound
+
+Frontend: HTML, CSS (via Flask Templates)
