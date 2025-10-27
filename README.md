@@ -9,10 +9,11 @@ A real-time intelligent surveillance system that detects and tracks objects (lik
 | Name | Roll Number |
 |------|--------------|
 | 🧠 **Kodali Sreeja** | 2410030076 |
-| 💻 **Likitha Thumma** | 2410030229 |
-| 🎯 **Malreddy Manogna** | 2410030430 |
-| 🧩 **H. Esha Manogna** | 2410030232 |
+| 💻 **Anugu Shiva Kumar Reddy ** | 2410030180 |
 | 🔍 **Bijju Adithi Yadav** | 2410030228 |
+| 🎯 **Likitha Thumma** | 2410030229 |
+| 🧩 **Varala Manish Reddy** | 2410030322 |
+| 🎯 **Kandakatla Manish Reddy** | 2410030396 |
 
 ---
 
@@ -48,18 +49,7 @@ A real-time intelligent surveillance system that detects and tracks objects (lik
 | **Alert System** | SMTP (Email) + Sound |
 | **Frontend** | HTML, CSS (via Flask Templates) |
 
----
 
-## ⚙️ How It Works
-
-1. Launch the Flask application (`python manage.py`).  
-2. The system starts real-time video streaming using your webcam.  
-3. When an object (like a bag or bottle) is detected, it’s tracked frame-by-frame.  
-4. If the object remains **unmoved and unattended** for 10 seconds (default), the system:  
-   - Sends an **email alert** with a snapshot.  
-   - Plays an **audible warning** sound (`alert.wav`).  
-   - Logs the snapshot in the **/static/** directory.  
-5. Users can also trigger a **manual alert** through the web interface.  
 
 
 
