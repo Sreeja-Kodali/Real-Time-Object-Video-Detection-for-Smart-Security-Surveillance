@@ -9,7 +9,7 @@ A real-time intelligent surveillance system that detects and tracks objects (lik
 | Name | Roll Number |
 |------|--------------|
 | **Kodali Sreeja** | 2410030076 |
-| **Anugu Shiva Kumar Reddy ** | 2410030180 |
+| **Anugu Shiva Kumar Reddy** | 2410030180 |
 | **Bijju Adithi Yadav** | 2410030228 |
 | **Likitha Thumma** | 2410030229 |
 | **Varala Manish Reddy** | 2410030322 |
